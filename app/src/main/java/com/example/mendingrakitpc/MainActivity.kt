@@ -1,11 +1,15 @@
 package com.example.mendingrakitpc
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import androidx.fragment.app.FragmentActivity
 
+//next button
 lateinit var hadiahUndi: ImageView
+//image hadiah
+lateinit var nextBtn : Button
 
 class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,12 +20,18 @@ class MainActivity : FragmentActivity() {
         undiBtn.setOnClickListener {
             undiHasil()
         }
+        //this is for next intent
+        nextBtn = findViewById(R.id.next_btn1)
+        nextBtn.setOnClickListener {
+            val nextPage = Intent(this,FragmentOne::class.java)
+            startActivity(nextPage)
+        }
+        //this is for hadiah image
         hadiahUndi = findViewById(R.id.hadiah_ic)
     }
 
     private fun undiHasil() {
-        val hasilUndi = java.util.Random().nextInt(6)+1
-        val gambarHadiah = when(hasilUndi){
+        val gambarHadiah = when(java.util.Random().nextInt(6)+1){
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3
