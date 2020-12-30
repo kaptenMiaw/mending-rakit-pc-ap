@@ -2,8 +2,10 @@ package com.example.mendingrakitpc
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
+import android.widget.ImageView
 import androidx.fragment.app.FragmentActivity
+
+lateinit var hadiahUndi: ImageView
 
 class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,11 +16,20 @@ class MainActivity : FragmentActivity() {
         undiBtn.setOnClickListener {
             undiHasil()
         }
+        hadiahUndi = findViewById(R.id.hadiah_ic)
     }
 
     private fun undiHasil() {
-        val undiBtn = findViewById<TextView>(R.id.hasil_undi)
         val hasilUndi = java.util.Random().nextInt(6)+1
-        undiBtn.text = hasilUndi.toString()
+        val gambarHadiah = when(hasilUndi){
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            6 -> R.drawable.dice_6
+            else -> R.drawable.empty_dice
+        }
+        hadiahUndi.setImageResource(gambarHadiah)
     }
 }
