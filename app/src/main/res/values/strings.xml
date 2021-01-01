@@ -3,4 +3,6 @@
     <string name="undi_btn">Undi</string>
     <string name="welcome_title_1">Welcome To Mending Rakit PC</string>
     <string name="pc">pc</string>
+    <string name="todo">TODO</string>
+    <string name="nxt_act">Next Avtivity</string>
 </resources>

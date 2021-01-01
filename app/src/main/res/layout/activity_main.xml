@@ -14,13 +14,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/empty_dice"
-        tools:src="@drawable/dice_1"/>
+        tools:src="@drawable/dice_1"
+        android:contentDescription="@string/todo" />
 
     <Button
         android:id="@+id/undi_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/big_btn_size"
         android:text="@string/undi_btn" />
 
     <Button
@@ -29,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="13dp"
-        android:text="Next Avtivity" />
+        android:text="@string/nxt_act"
+        android:textSize="@dimen/big_btn_size" />
 
 </LinearLayout>
