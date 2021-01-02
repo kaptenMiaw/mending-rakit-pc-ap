@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/constraint_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,21 +8,22 @@
 
     <TextView
         android:id="@+id/header_title"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        style="@style/title_header"
+        android:layout_marginStart="@dimen/med_padding"
+        android:layout_marginTop="@dimen/small_padding"
+        android:layout_marginEnd="@dimen/med_padding"
+        android:fontFamily="@font/archivo_black"
         android:text="@string/welcome_title_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/title_header" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/pc_list"
         android:layout_width="148dp"
         android:layout_height="147dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/med_padding"
+        android:layout_marginTop="@dimen/med_padding"
         android:background="#03A9F4"
         android:fontFamily="@font/archivo_black"
         android:paddingTop="8dp"
@@ -33,19 +35,47 @@
         app:layout_constraintTop_toBottomOf="@+id/header_title" />
 
     <TextView
-        android:id="@+id/pc_list2"
-        android:layout_width="148dp"
-        android:layout_height="147dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:background="#03A9F4"
+        android:id="@+id/desc_one"
+        style="@style/title_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/archivo_black"
-        android:paddingTop="8dp"
-        android:text="@string/pc"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pc_list" />
+        android:layout_marginEnd="@dimen/small_padding"
+        android:layout_marginStart="@dimen/small_padding"
+        android:text="@string/bx_one"
+        app:layout_constraintBottom_toTopOf="@+id/desc_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pc_list"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintTop_toTopOf="@id/pc_list" />
+
+    <TextView
+        android:id="@+id/desc_two"
+        style="@style/title_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/bx_two"
+        android:layout_marginEnd="@dimen/small_padding"
+        android:layout_marginStart="@dimen/small_padding"
+        app:layout_constraintBottom_toTopOf="@+id/desc_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pc_list"
+        app:layout_constraintTop_toBottomOf="@+id/desc_one" />
+
+    <TextView
+        android:id="@+id/desc_three"
+        style="@style/title_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/bx_three"
+        android:layout_marginEnd="@dimen/small_padding"
+        android:layout_marginStart="@dimen/small_padding"
+        app:layout_constraintBottom_toBottomOf="@+id/pc_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pc_list"
+        app:layout_constraintTop_toBottomOf="@+id/desc_two" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

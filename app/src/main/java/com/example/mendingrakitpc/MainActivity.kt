@@ -4,24 +4,27 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 
 //next button
 lateinit var hadiahUndi: ImageView
-//image hadiah
-lateinit var nextBtn : Button
 
 class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //undi btn
         val undiBtn = findViewById<Button>(R.id.undi_btn)
+        var timeClicked = 0
         undiBtn.setOnClickListener {
             undiHasil()
+            timeClicked += 1
+            Toast.makeText(this,"Ini adalah hadiah ke $timeClicked mu", Toast.LENGTH_SHORT).show()
         }
         //this is for next intent
-        nextBtn = findViewById(R.id.next_btn1)
+        val nextBtn = findViewById<Button>(R.id.next_btn1)
         nextBtn.setOnClickListener {
             val nextPage = Intent(this,FragmentOne::class.java)
             startActivity(nextPage)

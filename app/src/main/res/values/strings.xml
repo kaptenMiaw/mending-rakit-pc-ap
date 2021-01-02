@@ -5,4 +5,9 @@
     <string name="pc">pc</string>
     <string name="todo">TODO</string>
     <string name="nxt_act">Next Avtivity</string>
+
+    //box str for fragment 1
+    <string name="bx_one">Box one</string>
+    <string name="bx_two">Box two</string>
+    <string name="bx_three">Box three</string>
 </resources>
