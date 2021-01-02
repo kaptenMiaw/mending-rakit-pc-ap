@@ -10,4 +10,9 @@
     <string name="bx_one">Box one</string>
     <string name="bx_two">Box two</string>
     <string name="bx_three">Box three</string>
+    <string name="how_to_play">How To Play:</string>
+    <string name="info">tap the button and u will see magic</string>
+    <string name="red">Red</string>
+    <string name="magenta">Magenta</string>
+    <string name="blue">blue</string>
 </resources>
